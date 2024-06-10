@@ -24,4 +24,9 @@ class Product extends Model
     {
         return $this->belongsToMany(Color::class, 'color_products');
     }
+
+    public function getImgUrlAttribute()
+    {
+        return 'storage/' . $this->img;
+    }
 }
